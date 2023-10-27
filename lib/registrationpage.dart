@@ -1,47 +1,57 @@
 import 'package:flutter/material.dart';
-class RegistrationPage extends StatelessWidget{
+import 'package:stemedu/homepage.dart';
+class Registrationpage extends StatefulWidget{
+  const Registrationpage({super.key});
+
+  @override
+  State<Registrationpage> createState() => _RegistrationPageState();
+}
+
+class _RegistrationPageState extends State<Registrationpage> {
   @override
   Widget build(BuildContext context)
   {
     return Scaffold(
-      appBar: AppBar(title: Text('Registration')),
+      appBar: AppBar(title: const Text('Registration')),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-    SizedBox(
+    const SizedBox(
     height: 20.0,
     ),
     Padding(
-    padding: EdgeInsets.symmetric(horizontal: 20.0),
+    padding: const EdgeInsets.symmetric(horizontal: 20.0),
     child: Column(children:<Widget>[
-    TextField(
+    const TextField(
     decoration: InputDecoration(labelText: ('FirstName :')),
   ),
-      SizedBox(height: 10.0),
-      TextField(
+      const SizedBox(height: 10.0),
+      const TextField(
         decoration: InputDecoration(labelText: ('LastName :')),
       ),
-      SizedBox(height: 10.0),
-      TextField(
+      const SizedBox(height: 10.0),
+      const TextField(
         decoration: InputDecoration(labelText: ('Email :')),
       ),
-      SizedBox(height: 10.0),
-      TextField(
+      const SizedBox(height: 10.0),
+      const TextField(
         decoration: InputDecoration(labelText: ('Username :')),
       ),
-      SizedBox(height: 10.0),
-      TextField(obscureText:true,
+      const SizedBox(height: 10.0),
+      const TextField(obscureText:true,
         decoration: InputDecoration(labelText: ('Password :')),
       ),
-      SizedBox(height: 10.0),
-      TextField(obscureText:true,
+      const SizedBox(height: 10.0),
+      const TextField(obscureText:true,
         decoration: InputDecoration(labelText: ('Repeat Password:')),
       ),
-      SizedBox(height: 10.0),
-      ElevatedButton(onPressed: (){}, child: Text('Register'))
+      const SizedBox(height: 10.0),
+      ElevatedButton(onPressed: (){
+        Navigator.push(context,MaterialPageRoute(builder: (context)=>const Homepage()));
+      }, child: const Text('Register'))
         ]
     )
     )
